@@ -1,0 +1,1 @@
+//Solo mostrar un mensaje de bienvenida pasado a traves de props
