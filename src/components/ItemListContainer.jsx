@@ -3,7 +3,7 @@ export default function ItemListContainer(props){
     return (
         <>
             <section>
-                <h2>Hola, Bienvenidos a mi tienda</h2>
+                <h2>{props.bienvenida}</h2>
             </section>
         </>
     )

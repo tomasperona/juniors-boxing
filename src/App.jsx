@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <ItemListContainer></ItemListContainer>
+      <ItemListContainer bienvenida="Hola, bienvenidos a Juniors Boxing"></ItemListContainer>
     </>
   )
 }
