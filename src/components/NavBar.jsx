@@ -1,5 +1,6 @@
 //menu con logo de la tienda, links de navegacion
 import CartWidget from './CartWidget.jsx'
+import { NavLink } from "react-router-dom" // <-- Corrección aquí
 export default function NavBar() {
 
     return (
@@ -11,13 +12,13 @@ export default function NavBar() {
                      <a  className='visited:text-white'  href="#">Guantes</a>
                  </li>
                  <li>
-                     <a  className='' href="#">Elementos de Entrenamiento</a>
+                     <NavLink to="/entrenamiento">Elementos de Entrenamiento</NavLink>
                  </li>
                  <li>
-                     <a  href="#">Vendas y Cascos</a>
+                     <NavLink to="/vendas-cascos">Vendas y Cascos</NavLink>
                  </li>
                  <li>
-                     <a className='' href="#">Contacto</a>
+                     <NavLink to="/contacto">Contacto</NavLink>
                  </li>
                  <li>
                      <CartWidget></CartWidget>
