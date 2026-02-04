@@ -1,4 +1,4 @@
-import getData from '../data/mockService'
+import { getData } from '../data/firestore.js'
 import Item from "./item.jsx"
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'

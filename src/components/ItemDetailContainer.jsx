@@ -1,17 +1,38 @@
 import { useParams } from 'react-router-dom'
-import productsData from '../data/products'
+// import productsData from '../data/products'
 import ItemCount from './ItemCount.jsx'
 import { useCart } from './CartContext.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getItemData } from '../data/firestore.js'
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
-  const product = productsData.find(p => p.id === Number(id));
+  console.log('ID recibido:', id);
+  const [product, setProduct] = useState(null);
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
 
-  if (!product) {
+
+  // Cargar producto desde Firebase
+  useEffect(() => {
+    setProduct(null);
+    getItemData(id)
+      .then(data => {
+        console.log('Producto recibido:', data);
+        setProduct(data);
+      })
+      .catch((err) => {
+        console.log('Error al obtener producto:', err);
+        setProduct(undefined);
+      });
+  }, [id]);
+
+  if (product === null) {
+    return <div style={{padding: '2rem', textAlign: 'center'}}>Cargando producto...</div>;
+  }
+  // Si no existe producto o no tiene datos válidos
+  if (product === undefined || !product || !product.title) {
     return <div style={{padding: '2rem', textAlign: 'center'}}>Producto no encontrado</div>;
   }
 
