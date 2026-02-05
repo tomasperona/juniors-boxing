@@ -69,7 +69,7 @@ export default function CheckoutForm({ cart, total, onClose }) {
         <button type="submit" disabled={loading} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
           {loading ? 'Procesando...' : 'Confirmar compra'}
         </button>
-        <button type="button" onClick={onClose} className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">Cancelar</button>
+        <button type="button" onClick={onClose} className="bg-gray-300 text-white px-4 py-2 rounded hover:bg-gray-400">Cancelar</button>
       </div>
     </form>
   );
