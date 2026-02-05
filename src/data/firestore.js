@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { collection, getDoc, getDocs, getFirestore, query, doc, where } from 'firebase/firestore'
 import { getAnalytics } from "firebase/analytics";
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBU1n7DdNvRb7QhIAw2Y7KTL8S9G8IuJeE",
+  apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
   authDomain: "juniors-boxing.firebaseapp.com",
   projectId: "juniors-boxing",
   storageBucket: "juniors-boxing.firebasestorage.app",
   messagingSenderId: "200302772555",
-  appId: "1:200302772555:web:02707186872c78de86a8ce",
+  appId: import.meta.env.VITE_FIREBASE_APPID,
   measurementId: "G-955KCNCE0Y"
 };
 
