@@ -1,16 +1,90 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Juniors Boxing 🥊
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación web desarrollada con React.js y Vite, diseñada para la gestión de productos y ventas de una tienda de boxeo. Incluye funcionalidades de carrito de compras, listado y detalle de productos, formulario de contacto y checkout, utilizando Firebase para la gestión de datos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características principales
 
-## React Compiler
+- **Catálogo de productos:** Visualización de productos disponibles con detalles individuales.
+- **Carrito de compras:** Añade, elimina y ajusta la cantidad de productos en el carrito.
+- **Checkout:** Formulario para completar la compra y almacenar la orden en Firebase.
+- **Contacto:** Sección para que los usuarios puedan enviar consultas.
+- **Contexto global:** Manejo del estado del carrito usando Context API de React.
+- **Estilizado:** Uso de CSS para una interfaz moderna y responsiva.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura del proyecto
 
-## Expanding the ESLint configuration
+```
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── Cart.jsx
+│   │   ├── CartContext.jsx
+│   │   ├── CartWidget.jsx
+│   │   ├── CheckoutForm.jsx
+│   │   ├── Contact.jsx
+│   │   ├── item.jsx
+│   │   ├── ItemCount.jsx
+│   │   ├── ItemDetailContainer.jsx
+│   │   ├── ItemListContainer.jsx
+│   │   └── NavBar.jsx
+│   └── data/
+│       ├── firestore.js
+│       ├── mockService.js
+│       └── products.js
+├── index.html
+├── package.json
+├── vite.config.js
+├── eslint.config.js
+├── README.md
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalación y ejecución
+
+1. **Clona el repositorio:**
+	```bash
+	git clone https://github.com/tu-usuario/juniors-boxing.git
+	cd juniors-boxing
+	```
+2. **Instala las dependencias:**
+	```bash
+	npm install
+	```
+3. **Configura Firebase:**
+	- Crea un proyecto en [Firebase](https://firebase.google.com/).
+	- Obtén las credenciales y reemplázalas en `src/data/firestore.js`.
+4. **Inicia la aplicación:**
+	```bash
+	npm run dev
+	```
+5. **Abre en el navegador:**
+	- Visita [http://localhost:5173](http://localhost:5173)
+
+## Dependencias principales
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Firebase](https://firebase.google.com/)
+
+## Estructura de carpetas clave
+
+- **components/**: Componentes reutilizables de la interfaz.
+- **data/**: Servicios y datos simulados o reales (Firebase).
+- **assets/**: Imágenes y recursos estáticos.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para sugerencias o mejoras.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+---
+
+Desarrollado por [Tu Nombre].

@@ -51,9 +51,16 @@ export async function getCategoryData(categoryID) {
 }
 
 import { addDoc } from 'firebase/firestore';
+import products from './products.js';
 
 export async function createBuyOrder(orderData) {
   const ordersRef = collection(db, 'orders');
   const docRef = await addDoc(ordersRef, orderData);
   return docRef.id;
+}
+
+export async function exportProductsToFirestore() {
+  for(let item of products) {
+    const docRef = await addDoc(collection(db,"products"), item )
+  }
 }

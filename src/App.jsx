@@ -7,11 +7,13 @@ import { Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'
 import Cart from './components/Cart.jsx'
 import Contact from './components/Contact.jsx'
+import { exportProductsToFirestore } from './data/firestore.js'
 
 function App() {
   return (
     <>
       <NavBar />
+
 
       <main className="pt-20 w-full min-h-screen bg-gray-100">
         <div className="w-full max-w-7xl mx-auto px-4">

@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200">
       <section className="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-6 items-center mx-auto my-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">Contacto</h2>
-        <p className="text-gray-700 text-center mb-4">¿Tienes alguna consulta o sugerencia? Completa el formulario y te responderé a la brevedad.</p>
+        <p className="text-gray-700 text-center mb-4">¿Tenés alguna consulta o sugerencia? Completá el formulario y te responderé a la brevedad.</p>
         <form className="w-full flex flex-col gap-4">
           <input type="text" placeholder="Nombre" className=" text-black border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required />
           <input type="email" placeholder="Email" className="text-black border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required />
